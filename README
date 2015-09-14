@@ -1,0 +1,97 @@
+Colan Biemer 
+cfb43@drexel.edu or colan@comcast.net
+CS 350 - README
+
+Required files:
+CreateExamDriver.java	
+Essay.java		
+FileSurvey.java		
+MultipleChoice.java	
+Survey.java
+CreateSurveyDriver.java	
+Exam.java		
+Main.java		
+Question.java		
+shortAnswer.java
+Driver.java		
+FileExam.java		
+Match.java		
+Rank.java		
+trueFalse.java
+QuestionFactory.java
+QuestionExamFactory.java
+QuestionSurveyFactory.java
+QuestionExamUserAnswerFactory.java
+QuestionSurveyUseranswerFactory.java
+Output.java
+
+
+org.json-20120521.jar
+
+CreateExamDriver.class		
+Essay.class			
+FileSurvey.class		
+MultipleChoice.class		
+Survey.class
+CreateSurveyDriver.class	
+Exam.class			
+Main.class			
+Question.class			
+shortAnswer.class
+Driver.class			
+FileExam.class			
+Match.class			
+Rank.class			
+trueFalse.class
+QuestionFactory.class
+QuestionExamFactory.class
+QuestionSurveyFactory.class
+QuestionExamUserAnswerFactory.class
+QuestionSurveyUseranswerFactory.class
+Output.java
+
+Required Directories to run in eclipse:
+testSurvey
+	bin 
+		testSurvey
+	src
+		testSurvey
+
+.java files will be in testSurvey/src/testSurvey
+.class files will be in testSurvey/bin/testSurvey
+.jar fill will be in testSurvey
+
+Other files such as s_asdf or t_file are examples of a survey and a test, in that order.
+
+To run:
+I recommend using eclipse to save you the trouble of dealing with all the files and directories.
+Make sure you have org.json-20120521.jar in the build path or else the JSON field handling will most likely give a compile error.
+
+When running:
+given each menu just respond to the given output such as first menu, enter the number given.
+I've given a few error checkers so you shouldn't be able to get stuck on any screen except for the main menu, which you press 9 to quit out of.
+
+Seraialization: 
+I use JSON to deal with reading the text and i make the json text myself when saving the text. 
+
+If you have trouble running you can always view this youtube video:
+Part 2 of assignment: https://www.youtube.com/watch?v=jHD4ZmwEKNY
+Part 3 of assignment: https://www.youtube.com/watch?v=5sHMqIRMzLQ
+part 4 of assignment: no video, since I just add audio to output
+
+11/25/14 notes:
+Added Output class which now takes care of all output and more importantly will read it aloud. The issue with this is that it is rather slow, but it is what was asked for so it has been implemented.
+
+11/13/14 notes:
+Updated FileExam and FileSurvey so they now pass JSONObject questionInfo to QuestionFactory which now deals with making the Question object rather than doing it in that huge if statement as before. To accomodate this 4 extra class where added which inheret from Questionfacotry: QuestionExamFactory, QuestionSurveyFactory, QuestionExamUserAnswerFactory, and QuesitonSurveyUserAnswerFactory. Vastly simplified code.
+
+11/12/14 notes:
+A lot time was wasted figuring out basics of Java for when you should and shouldn't copy and object in Java. Past that the coding process was smooth, just took a while to diagnoese the issue at hand. 
+Found error when given an empty file, fixed using a buffer reader solution and checking if it was null from the start.
+Added userAnswer portion to code so now previous exams and surveys can be used. This is implemented in JSON as an array of arrays. This is used for tabulate, and is also where the copying issue came from. 
+Multiple functions were added to accomadate for the new funcitonality.
+Fixed multiple crash bugs from previous build, that were otherswise hard to find.
+Added additional comments.
+One known bug that popped up once around using 0, haven't been able to replicate it but it did cause a crash. 
+JSON tostring methods added to along with new methods for takenexams and the questions inside.
+Type new, for both test and survey when loading. They are two different files, and are found within the implementation.
